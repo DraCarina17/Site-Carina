@@ -61,8 +61,12 @@ export default function ClinicalCases() {
               transition={{ delay: idx * 0.1 }}
               className="space-y-6 group"
             >
-              <div className="relative aspect-video rounded-2xl overflow-hidden border border-border shadow-lg">
-                <img src={c.imageAfter} alt={c.category} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-lg bg-black/5">
+                <img 
+                  src={c.imageAfter} 
+                  alt={c.category} 
+                  className="w-full h-auto min-h-[300px] object-cover group-hover:scale-105 transition-transform duration-700 block" 
+                />
                 <div className="absolute top-4 left-4 flex gap-2">
                    <span className="px-3 py-1 bg-brand-navy/90 text-white text-[9px] font-bold uppercase tracking-widest rounded-full">{c.category}</span>
                 </div>
