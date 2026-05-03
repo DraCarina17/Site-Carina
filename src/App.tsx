@@ -10,10 +10,10 @@ import LandingPage from './components/LandingPage';
 import Procedures from './components/Procedures';
 import Contact from './components/Contact';
 import ClinicalCases from './components/ClinicalCases';
+import WhatsAppButton from './components/WhatsAppButton';
 
 /**
  * Detects if the current environment is a preview/proxy environment.
- * Helps prevent routing issues in cloud development environments.
  */
 function checkPreviewEnvironment(): boolean {
   const indicators = [
@@ -58,6 +58,7 @@ export default function App() {
         {/* Fallback */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+      <WhatsAppButton />
     </Router>
   );
 }
