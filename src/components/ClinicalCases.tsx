@@ -9,24 +9,27 @@ import { Link } from 'react-router-dom';
 
 export default function ClinicalCases() {
   const cases = [
-    // Placeholder cases to be populated soon
     {
       id: 1,
-      title: 'Reabilitação Estética Total',
-      category: 'Lentes de Contato',
-      description: 'Transformação completa do sorriso utilizando lâminas de porcelana premium.',
-      imageBefore: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1974&auto=format&fit=crop',
-      imageAfter: 'https://images.unsplash.com/photo-1606811841660-1b51e9fd274c?q=80&w=1974&auto=format&fit=crop',
+      category: 'Lente de Contato',
+      imageAfter: '/lente1.png',
     },
     {
       id: 2,
-      title: 'Recuperação Funcional',
-      category: 'Prótese sobre Implante',
-      description: 'Devolvendo a segurança e o prazer de comer através de implantes estáveis.',
-      imageBefore: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=2070&auto=format&fit=crop',
-      imageAfter: 'https://images.unsplash.com/photo-15930590c8312-6e773e526733?q=80&w=2072&auto=format&fit=crop',
+      category: 'Lente de Contato',
+      imageAfter: '/lente2.png',
+    },
+    {
+      id: 3,
+      category: 'Prótese Protocolo',
+      imageAfter: '/protocolo.png',
+    },
+    {
+      id: 4,
+      category: 'Prótese Total Superior & Prótese Protocolo Inferior',
+      imageAfter: '/reabilitacao.png',
     }
-  ];
+  ].sort((a, b) => a.category.localeCompare(b.category));
 
   return (
     <div className="min-h-screen bg-bg text-brand-navy">
@@ -59,15 +62,10 @@ export default function ClinicalCases() {
               className="space-y-6 group"
             >
               <div className="relative aspect-video rounded-2xl overflow-hidden border border-border shadow-lg">
-                <img src={c.imageAfter} alt={c.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={c.imageAfter} alt={c.category} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute top-4 left-4 flex gap-2">
                    <span className="px-3 py-1 bg-brand-navy/90 text-white text-[9px] font-bold uppercase tracking-widest rounded-full">{c.category}</span>
                 </div>
-              </div>
-              
-              <div className="space-y-2">
-                <h3 className="text-2xl font-display">{c.title}</h3>
-                <p className="text-sm text-muted leading-relaxed">{c.description}</p>
               </div>
 
               <div className="flex items-center text-[10px] font-bold uppercase tracking-[0.2em] text-accent">
@@ -81,7 +79,7 @@ export default function ClinicalCases() {
         <div className="mt-20 p-20 border-2 border-dashed border-border rounded-3xl text-center">
             <ImageIcon className="w-12 h-12 text-border mx-auto mb-6" />
             <h3 className="text-xl font-display text-muted">Novos casos em breve</h3>
-            <p className="text-xs text-muted/60 mt-2 uppercase tracking-widest">Aguardando novos dados para atualização</p>
+            <p className="text-xs text-muted/60 mt-2 uppercase tracking-widest italic font-medium">Fique atento (a) para novos casos em breve</p>
         </div>
       </section>
 
