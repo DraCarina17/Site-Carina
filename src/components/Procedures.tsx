@@ -17,32 +17,65 @@ export default function Procedures() {
       icon: <Sparkles className="w-6 h-6 text-accent" />
     },
     {
-      title: 'Reabilitação Oral',
-      category: 'Função',
-      description: 'Tratamentos complexos para devolver a função mastigatória e o equilíbrio da saúde bucal.',
-      details: ['Planejamento digital', 'Abordagem multidisciplinar', 'Conforto garantido'],
+      title: 'Prótese Total',
+      category: 'Reabilitação',
+      description: 'Recuperação completa da estética e função para quem busca segurança e conforto ao sorrir e falar.',
+      details: ['Estética personalizada', 'Ajuste anatômico preciso', 'Devolve a autoconfiança'],
       icon: <ShieldCheck className="w-6 h-6 text-accent" />
     },
     {
-      title: 'Clareamento Premium',
+      title: 'Prótese Parcial Removível',
+      category: 'Reabilitação',
+      description: 'Solução eficiente para repor dentes ausentes, restabelecendo o equilíbrio e a mastigação.',
+      details: ['Preservação dos dentes naturais', 'Estrutura leve e resistente', 'Harmonia visual'],
+      icon: <CheckCircle2 className="w-6 h-6 text-accent" />
+    },
+    {
+      title: 'Prótese sobre Implante',
+      category: 'Inovação',
+      description: 'A máxima estabilidade para o seu sorriso, com a sensação e aparência de dentes naturais fixos.',
+      details: ['Fixação absoluta', 'Prevenção de perda óssea', 'Conforto total ao comer'],
+      icon: <ShieldCheck className="w-6 h-6 text-accent" />
+    },
+    {
+      title: 'Coroas em Porcelana',
+      category: 'Restauração',
+      description: 'Restaurações de alta resistência que devolvem a integridade e a beleza de dentes comprometidos.',
+      details: ['Material biocompatível', 'Resistência superior', 'Adaptação perfeita'],
+      icon: <Sparkles className="w-6 h-6 text-accent" />
+    },
+    {
+      title: 'Clareamento',
       category: 'Estética',
-      description: 'Protocolos personalizados para um sorriso radiante sem causar sensibilidade excessiva.',
-      details: ['Resultados duradouros', 'Acompanhamento clínico', 'Gel de alta performance'],
+      description: 'Protocolos seguros para remover pigmentações e devolver o brilho natural dos seus dentes.',
+      details: ['Brilho renovado', 'Protocolo personalizado', 'Mínima sensibilidade'],
+      icon: <Heart className="w-6 h-6 text-accent" />
+    },
+    {
+      title: 'Odontologia Preventiva',
+      category: 'Manutenção',
+      description: 'O segredo da longevidade. Cuidado contínuo para evitar problemas complexos e manter a saúde em dia.',
+      details: ['Limpeza técnica profunda', 'Diagnóstico precoce', 'Prevenção de doenças'],
       icon: <Heart className="w-6 h-6 text-accent" />
     }
   ];
 
   return (
     <div className="min-h-screen bg-bg text-brand-navy">
-      <nav className="p-6 md:p-8 flex items-center max-w-7xl mx-auto">
+      <nav className="p-6 md:p-8 flex items-center justify-between max-w-7xl mx-auto border-b border-border">
         <Link to="/" className="flex items-center text-xs uppercase tracking-widest font-bold group">
-          <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" /> Voltar
+          <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" /> Home
         </Link>
+        <div className="flex space-x-8 text-[10px] uppercase tracking-widest font-bold">
+          <Link to="/procedimentos" className="text-accent underline underline-offset-4">Procedimentos</Link>
+          <Link to="/casos-clinicos" className="hover:text-accent transition-colors">Casos Clínicos</Link>
+          <Link to="/contato" className="hover:text-accent transition-colors">Contato</Link>
+        </div>
       </nav>
 
       <header className="py-20 px-8 text-center max-w-4xl mx-auto space-y-4">
         <h1 className="text-4xl md:text-6xl font-display">Nossos <span className="text-accent italic">Procedimentos</span></h1>
-        <p className="text-muted leading-relaxed">Cada tratamento é planejado de forma individualizada, unindo ciência e arte para resultados excepcionais em São Carlos.</p>
+        <p className="text-muted leading-relaxed">Cada tratamento é planejado de forma individualizada, unindo ciência e arte para resultados excepcionais e recuperação total da sua auto estima e função.</p>
       </header>
 
       <section className="max-w-7xl mx-auto px-8 pb-32">
@@ -82,6 +115,14 @@ export default function Procedures() {
           ))}
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="py-20 px-8 border-t border-border flex flex-col items-center gap-4">
+         <div className="text-center space-y-2">
+           <p className="text-[10px] text-brand-navy uppercase tracking-[0.4em] font-bold">Dra. Carina Corneta | CROSP 113657</p>
+           <p className="text-[10px] text-accent font-medium uppercase tracking-[0.2em]">Reabilitação Oral & Estética Avançada</p>
+         </div>
+      </footer>
     </div>
   );
 }

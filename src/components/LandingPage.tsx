@@ -18,6 +18,7 @@ export default function LandingPage() {
         </div>
         <div className="hidden md:flex space-x-10 text-xs uppercase tracking-[0.2em] font-bold">
           <Link to="/procedimentos" className="hover:text-accent transition-colors">Procedimentos</Link>
+          <Link to="/casos-clinicos" className="hover:text-accent transition-colors">Casos Clínicos</Link>
           <Link to="/contato" className="hover:text-accent transition-colors">Contato</Link>
         </div>
       </nav>
@@ -70,8 +71,8 @@ export default function LandingPage() {
             <div className="relative">
               <div className="aspect-[3/4] rounded-2xl border border-accent/20 overflow-hidden shadow-2xl relative z-10 bg-brand-navy/5">
                 <img 
-                  src="/dra_carina.jpg" 
-                  alt="Dra. Carina Corneta" 
+                  src="/dr_carina_corneta.png" 
+                  alt="Dra. Carina Corneta - Especialista em Reabilitação Oral" 
                   className="w-full h-full object-cover"
                   onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=1974&auto=format&fit=crop"; }}
                 />
@@ -151,7 +152,7 @@ export default function LandingPage() {
             </a>
          </div>
          <div className="text-center space-y-2">
-           <p className="text-[10px] text-brand-navy uppercase tracking-[0.4em] font-bold">Dra. Carina Corneta | CRO-SP 12345</p>
+           <p className="text-[10px] text-brand-navy uppercase tracking-[0.4em] font-bold">Dra. Carina Corneta | CROSP 113657</p>
            <p className="text-[10px] text-accent font-medium uppercase tracking-[0.2em]">Reabilitação Oral & Estética Avançada</p>
          </div>
       </footer>
