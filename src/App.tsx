@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { useEffect } from 'react';
 import { HashRouter, BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Sitemap from './components/Sitemap';
 import LandingPage from './components/LandingPage';
@@ -31,6 +32,9 @@ function checkPreviewEnvironment(): boolean {
 export default function App() {
   const isPreview = checkPreviewEnvironment();
   
+  useEffect(() => {
+    document.title = "Dra Carina Corneta - Odontologia";
+  }, []);
   // Use HashRouter for previews to avoid 404s on refresh in proxy environments.
   // Use BrowserRouter for production to maintain SEO-friendly URLs and UTM tracking.
   const Router = isPreview ? HashRouter : BrowserRouter;

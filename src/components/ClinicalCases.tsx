@@ -15,16 +15,16 @@ export default function ClinicalCases() {
       title: 'Reabilitação Estética Total',
       category: 'Lentes de Contato',
       description: 'Transformação completa do sorriso utilizando lâminas de porcelana premium.',
-      imageBefore: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=1974&auto=format&fit=crop',
-      imageAfter: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=1974&auto=format&fit=crop',
+      imageBefore: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1974&auto=format&fit=crop',
+      imageAfter: 'https://images.unsplash.com/photo-1606811841660-1b51e9fd274c?q=80&w=1974&auto=format&fit=crop',
     },
     {
       id: 2,
       title: 'Recuperação Funcional',
       category: 'Prótese sobre Implante',
       description: 'Devolvendo a segurança e o prazer de comer através de implantes estáveis.',
-      imageBefore: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=1974&auto=format&fit=crop',
-      imageAfter: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=1974&auto=format&fit=crop',
+      imageBefore: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=2070&auto=format&fit=crop',
+      imageAfter: 'https://images.unsplash.com/photo-15930590c8312-6e773e526733?q=80&w=2072&auto=format&fit=crop',
     }
   ];
 

@@ -71,7 +71,7 @@ export default function LandingPage() {
             <div className="relative">
               <div className="aspect-[3/4] rounded-2xl border border-accent/20 overflow-hidden shadow-2xl relative z-10 bg-brand-navy/5">
                 <img 
-                  src="/dra_carina_corneta.png" 
+                  src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1974&auto=format&fit=crop" 
                   alt="Dra. Carina Corneta - Especialista em Reabilitação Oral" 
                   className="w-full h-full object-cover"
                 />
@@ -98,10 +98,9 @@ export default function LandingPage() {
 
           <div className="w-full aspect-video rounded-2xl border border-accent/30 overflow-hidden shadow-2xl relative group bg-black/20">
              <video 
-                src="/clinic_video.mp4" 
+                src="https://cdn.pixabay.com/video/2021/04/23/71913-541243177_large.mp4" 
                 className="w-full h-full object-cover"
                 controls
-                autoPlay
                 muted
                 loop
                 playsInline
