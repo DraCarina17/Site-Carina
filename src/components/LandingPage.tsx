@@ -5,6 +5,7 @@
 
 import { motion } from 'motion/react';
 import { Phone, Instagram, CheckCircle2, PlayCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function LandingPage() {
   return (
@@ -16,8 +17,8 @@ export default function LandingPage() {
           <span className="text-[10px] tracking-[0.3em] font-bold uppercase text-accent">Reabilitação Oral & Estética Avançada</span>
         </div>
         <div className="hidden md:flex space-x-10 text-xs uppercase tracking-[0.2em] font-bold">
-          <a href="#procedimentos" className="hover:text-accent transition-colors">Procedimentos</a>
-          <a href="#contato" className="hover:text-accent transition-colors">Contato</a>
+          <Link to="/procedimentos" className="hover:text-accent transition-colors">Procedimentos</Link>
+          <Link to="/contato" className="hover:text-accent transition-colors">Contato</Link>
         </div>
       </nav>
 
@@ -53,9 +54,9 @@ export default function LandingPage() {
               >
                 Agende sua Consulta <PlayCircle className="ml-3 w-4 h-4 text-accent" />
               </a>
-              <a href="#procedimentos" className="px-10 py-5 border border-accent text-accent rounded-lg font-bold tracking-widest uppercase text-xs hover:bg-accent hover:text-white transition-all text-center">
+              <Link to="/procedimentos" className="px-10 py-5 border border-accent text-accent rounded-lg font-bold tracking-widest uppercase text-xs hover:bg-accent hover:text-white transition-all text-center">
                 Ver Procedimentos
-              </a>
+              </Link>
             </div>
           </motion.div>
 
@@ -114,12 +115,24 @@ export default function LandingPage() {
       <section className="bg-white/50 py-24 px-8 border-y border-border">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
           {[
-            { title: 'Lentes de Contato Dental', desc: 'Sinta a excelência da porcelana em reproduzir a textura, translucidez e reflexão da luz natural do dente, garantindo estabilidade de cor e resistência superior.' },
-            { title: 'Implantes Guiados', desc: 'Tecnologia 3D para cirurgias sem cortes e recuperação recorde.' },
-            { title: 'Design Digital', desc: 'Planejamento virtual do seu novo sorriso antes do início.' }
+            { 
+              title: 'Lentes de Contato Dental', 
+              badge: 'Procedimento Premium',
+              desc: 'Sinta a excelência da porcelana em reproduzir a textura, translucidez e reflexão da luz natural do dente, garantindo estabilidade de cor e resistência superior.' 
+            },
+            { 
+              title: 'Seu Tratamento Personalizado', 
+              badge: 'O MELHOR PARA VOCÊ',
+              desc: 'Entregamos um serviço exclusivo baseado em sua necessidade. Buscamos ouvir as queixas e desejos do paciente para, combinado com nossa expertise, gerar a melhor entrega para você.' 
+            },
+            { 
+              title: 'Recupere sua Função e Estética', 
+              badge: 'VOLTE A SORRIR E COMER',
+              desc: 'Nossa missão é te fazer sorrir e voltar a ter uma mastigação satisfatória, devolvendo a confiança e o prazer em cada momento da sua vida.' 
+            }
           ].map((item, idx) => (
             <div key={idx} className="p-8 bg-white border border-border rounded-xl hover:border-accent transition-colors shadow-sm">
-              <div className="badge border-accent/40 text-accent mb-4 px-2 py-0.5 rounded-full inline-block bg-accent/5">Procedimento Premium</div>
+              <div className="badge border-accent/40 text-accent mb-4 px-2 py-0.5 rounded-full inline-block bg-accent/5">{item.badge}</div>
               <h3 className="text-xl font-display mb-3 text-brand-navy">{item.title}</h3>
               <p className="text-sm text-muted leading-relaxed">{item.desc}</p>
             </div>

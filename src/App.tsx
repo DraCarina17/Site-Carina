@@ -6,6 +6,8 @@
 import { HashRouter, BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Sitemap from './components/Sitemap';
 import LandingPage from './components/LandingPage';
+import Procedures from './components/Procedures';
+import Contact from './components/Contact';
 
 /**
  * Detects if the current environment is a preview/proxy environment.
@@ -44,6 +46,8 @@ export default function App() {
         {/* Main Routes */}
         <Route path="/sitemap" element={<Sitemap />} />
         <Route path="/lp-video" element={<LandingPage />} />
+        <Route path="/procedimentos" element={<Procedures />} />
+        <Route path="/contato" element={<Contact />} />
         
         {/* Fallback */}
         <Route path="*" element={<Navigate to="/" replace />} />
