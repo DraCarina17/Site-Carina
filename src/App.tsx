@@ -1,0 +1,54 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import { HashRouter, BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Sitemap from './components/Sitemap';
+import LandingPage from './components/LandingPage';
+
+/**
+ * Detects if the current environment is a preview/proxy environment.
+ * Helps prevent routing issues in cloud development environments.
+ */
+function checkPreviewEnvironment(): boolean {
+  const indicators = [
+    'googleusercontent',
+    'webcontainer',
+    'shim',
+    '.goog',
+    'scf.usercontent',
+    'stackblitz',
+    'codesandbox'
+  ];
+  const currentUrl = window.location.href;
+  return indicators.some(indicator => currentUrl.includes(indicator));
+}
+
+export default function App() {
+  const isPreview = checkPreviewEnvironment();
+  
+  // Use HashRouter for previews to avoid 404s on refresh in proxy environments.
+  // Use BrowserRouter for production to maintain SEO-friendly URLs and UTM tracking.
+  const Router = isPreview ? HashRouter : BrowserRouter;
+
+  return (
+    <Router>
+      <Routes>
+        {/* Dynamic Root Redirection based on environment */}
+        <Route 
+          path="/" 
+          element={<Navigate to={isPreview ? "/sitemap" : "/lp-video"} replace />} 
+        />
+        
+        {/* Main Routes */}
+        <Route path="/sitemap" element={<Sitemap />} />
+        <Route path="/lp-video" element={<LandingPage />} />
+        
+        {/* Fallback */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </Router>
+  );
+}
+
