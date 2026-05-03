@@ -71,10 +71,9 @@ export default function LandingPage() {
             <div className="relative">
               <div className="aspect-[3/4] rounded-2xl border border-accent/20 overflow-hidden shadow-2xl relative z-10 bg-brand-navy/5">
                 <img 
-                  src="/dr_carina_corneta.png" 
+                  src="/dra_carina_corneta.png" 
                   alt="Dra. Carina Corneta - Especialista em Reabilitação Oral" 
                   className="w-full h-full object-cover"
-                  onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=1974&auto=format&fit=crop"; }}
                 />
                 <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-brand-navy/60 to-transparent text-white">
                   <p className="font-display text-xl">Dra. Carina Corneta</p>
@@ -99,10 +98,13 @@ export default function LandingPage() {
 
           <div className="w-full aspect-video rounded-2xl border border-accent/30 overflow-hidden shadow-2xl relative group bg-black/20">
              <video 
-                src="/presentation_video.mp4" 
+                src="/clinic_video.mp4" 
                 className="w-full h-full object-cover"
                 controls
-                poster="https://images.unsplash.com/photo-1629909613654-28a3a7c4d459?q=80&w=2070&auto=format&fit=crop"
+                autoPlay
+                muted
+                loop
+                playsInline
              >
                 Seu navegador não suporta vídeos.
              </video>
