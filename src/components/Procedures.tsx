@@ -116,13 +116,6 @@ export default function Procedures() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-20 px-8 border-t border-border flex flex-col items-center gap-4">
-         <div className="text-center space-y-2">
-           <p className="text-[10px] text-brand-navy uppercase tracking-[0.4em] font-bold">Dra. Carina Corneta | CROSP 113657</p>
-           <p className="text-[10px] text-accent font-medium uppercase tracking-[0.2em]">Reabilitação Oral & Estética Avançada</p>
-         </div>
-      </footer>
     </div>
   );
 }

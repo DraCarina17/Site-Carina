@@ -11,6 +11,7 @@ import Procedures from './components/Procedures';
 import Contact from './components/Contact';
 import ClinicalCases from './components/ClinicalCases';
 import WhatsAppButton from './components/WhatsAppButton';
+import Footer from './components/Footer';
 
 /**
  * Detects if the current environment is a preview/proxy environment.
@@ -58,6 +59,7 @@ export default function App() {
         {/* Fallback */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+      <Footer />
       <WhatsAppButton />
     </Router>
   );

@@ -42,8 +42,8 @@ export default function LandingPage() {
               <span className="text-accent italic">Alta Performance</span>
             </h1>
             
-            <p className="text-lg text-muted max-w-xl leading-relaxed font-light">
-              Unimos a precisão do diagnóstico digital à arte da odontologia estética. Protocolos exclusivos para quem busca naturalidade e sofisticação em cada detalhe.
+            <p className="text-lg text-muted max-w-2xl leading-relaxed font-light">
+              Cuidamos do seu sorriso com precisão, sensibilidade e um olhar estético apurado. Unimos tecnologia digital ao planejamento personalizado para criar resultados naturais, harmônicos e alinhados com o que faz sentido para você. Cada detalhe é pensado para valorizar sua essência, com segurança e leveza em todo o processo.
             </p>
             
             <div className="flex flex-wrap gap-6 pt-6">
@@ -120,7 +120,7 @@ export default function LandingPage() {
             { 
               title: 'Lentes de Contato Dental', 
               badge: 'Procedimento Premium',
-              desc: 'Sinta a excelência da porcelana em reproduzir a textura, translucidez e reflexão da luz natural do dente, garantindo estabilidade de cor e resistência superior.' 
+              desc: 'Lentes de contato dental: laminados ultrafinos em porcelana que transformam o sorriso de forma rápida, segura e natural. Indicadas para corrigir cor, formato e pequenos desalinhamentos.' 
             },
             { 
               title: 'Seu Tratamento Personalizado', 
@@ -136,27 +136,11 @@ export default function LandingPage() {
             <div key={idx} className="p-8 bg-white border border-border rounded-xl hover:border-accent transition-colors shadow-sm">
               <div className="badge border-accent/40 text-accent mb-4 px-2 py-0.5 rounded-full inline-block bg-accent/5">{item.badge}</div>
               <h3 className="text-xl font-display mb-3 text-brand-navy">{item.title}</h3>
-              <p className="text-sm text-muted leading-relaxed">{item.desc}</p>
+               <p className="text-sm text-muted leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-20 px-8 flex flex-col items-center gap-10">
-         <div className="flex gap-8">
-            <a href="tel:16996300633" className="p-4 bg-white rounded-xl border border-border hover:border-accent text-brand-navy transition-all hover:-translate-y-1">
-              <Phone className="w-6 h-6" />
-            </a>
-            <a href="https://instagram.com/dra.carinacorneta" target="_blank" rel="noreferrer" className="p-4 bg-white rounded-xl border border-border hover:border-accent text-brand-navy transition-all hover:-translate-y-1">
-              <Instagram className="w-6 h-6" />
-            </a>
-         </div>
-         <div className="text-center space-y-2">
-           <p className="text-[10px] text-brand-navy uppercase tracking-[0.4em] font-bold">Dra. Carina Corneta | CROSP 113657</p>
-           <p className="text-[10px] text-accent font-medium uppercase tracking-[0.2em]">Reabilitação Oral & Estética Avançada</p>
-         </div>
-      </footer>
     </div>
   );
 }
