@@ -26,7 +26,7 @@ export default function ClinicalCases() {
     },
     {
       id: 4,
-      category: 'Prótese Total Superior & Prótese Protocolo Inferior',
+      category: 'Transformação com Coroas em Porcelana',
       imageAfter: '/reabilitacao.png',
     }
   ].sort((a, b) => a.category.localeCompare(b.category));
