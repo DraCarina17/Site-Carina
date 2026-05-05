@@ -27,7 +27,7 @@ export default function Contact() {
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-display">Fale <span className="text-accent italic">Conosco</span></h1>
               <p className="text-muted leading-relaxed max-w-lg">
-                Seu novo sorriso começa com uma conversa. Escolha o canal de sua preferência e agende sua avaliação com a Dra. Carina Corneta.
+                Seu novo sorriso começa com uma conversa. Escolha o canal de sua preferência para agendar sua avaliação personalizada com a Dra. Carina Corneta.
               </p>
             </div>
 
@@ -42,7 +42,7 @@ export default function Contact() {
                   <MessageCircle className="w-7 h-7" />
                 </div>
                 <div className="ml-6">
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-accent mb-1">Agendamento via WhatsApp</p>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-accent mb-1">Agendar avaliação personalizada</p>
                   <p className="text-lg font-semibold">(16) 99630-0633</p>
                 </div>
               </a>

@@ -24,7 +24,7 @@ export default function WhatsAppButton() {
         
         {/* Tooltip hint */}
         <div className="absolute right-full mr-4 bg-white text-brand-navy px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap font-medium border border-accent/20">
-          Agende sua consulta
+          Agendar avaliação personalizada
         </div>
       </motion.a>
     </div>

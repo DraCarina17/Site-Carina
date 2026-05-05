@@ -24,67 +24,103 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-24 pb-32 px-8 overflow-hidden">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="flex-1 space-y-10 order-2 lg:order-1"
-          >
-            <div className="inline-flex items-center gap-3 px-4 py-2 bg-card border border-border rounded-lg shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-              <span className="text-[10px] uppercase tracking-widest font-bold text-muted italic">Consultório Odontológico em São Carlos/SP</span>
-            </div>
+      <section className="relative pt-20 pb-32 px-8 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
             
-            <h1 className="text-6xl md:text-8xl font-display leading-[0.9] lg:-ml-1 text-brand-navy">
-              Sorriso de <br />
-              <span className="text-accent italic">Alta Performance</span>
-            </h1>
-            
-            <p className="text-lg text-muted max-w-2xl leading-relaxed font-light">
-              Cuidamos do seu sorriso com precisão, sensibilidade e um olhar estético apurado. Unimos tecnologia digital ao planejamento personalizado para criar resultados naturais, harmônicos e alinhados com o que faz sentido para você. Cada detalhe é pensado para valorizar sua essência, com segurança e leveza em todo o processo.
-            </p>
-            
-            <div className="flex flex-wrap gap-6 pt-6">
-              <a 
-                href="https://wa.me/5516996300633" 
-                target="_blank" 
-                rel="noreferrer"
-                className="px-10 py-5 bg-brand-navy text-white rounded-lg font-bold tracking-widest uppercase text-xs hover:bg-brand-navy/90 transition-all flex items-center shadow-xl shadow-brand-navy/10"
-              >
-                Agende sua Consulta <PlayCircle className="ml-3 w-4 h-4 text-accent" />
-              </a>
-              <Link to="/procedimentos" className="px-10 py-5 border border-accent text-accent rounded-lg font-bold tracking-widest uppercase text-xs hover:bg-accent hover:text-white transition-all text-center">
-                Ver Procedimentos
-              </Link>
-            </div>
-          </motion.div>
+            {/* Column 1: Intro & Call to Action */}
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="lg:col-span-6 space-y-12 order-2 lg:order-1 pt-8"
+            >
+              <div className="space-y-8">
+                <div className="inline-flex items-center gap-3 px-4 py-2 bg-white border border-border rounded-lg shadow-sm">
+                  <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                  <span className="text-[10px] uppercase tracking-widest font-bold text-muted italic">Consultório Odontológico em São Carlos/SP</span>
+                </div>
+                
+                <h1 className="text-5xl md:text-8xl font-display leading-[0.95] text-brand-navy">
+                  Estética Dental com <br />
+                  <span className="text-accent italic">Naturalidade e Precisão</span>
+                </h1>
+                
+                <p className="text-xl text-muted max-w-xl leading-relaxed font-light border-l-2 border-accent/20 pl-6">
+                  Se você tem medo de um sorriso artificial ou exagerado, você não está sozinho. Nosso foco não é transformar você em outra pessoa — é valorizar o que já é seu.
+                </p>
+              </div>
 
-          {/* Persona Image - Empatia Intimista */}
-          <motion.div 
-             initial={{ opacity: 0, x: 30 }}
-             animate={{ opacity: 1, x: 0 }}
-             transition={{ duration: 1 }}
-             className="flex-1 w-full lg:max-w-md order-1 lg:order-2"
-          >
-            <div className="relative">
-              <div className="aspect-[3/4] rounded-2xl border border-accent/20 overflow-hidden shadow-2xl relative z-10 bg-brand-navy/5">
-                <img 
-                  src="/dra_carina_corneta.png" 
-                  alt="Dra. Carina Corneta - Especialista em Reabilitação Oral" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-brand-navy/60 to-transparent text-white">
-                  <p className="font-display text-xl">Dra. Carina Corneta</p>
-                  <p className="text-[10px] tracking-widest uppercase text-accent font-bold">Cada detalhe planejado para o seu sorriso</p>
+              <div className="flex flex-wrap gap-6 pt-4">
+                <a 
+                  href="https://wa.me/5516996300633" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="px-10 py-5 bg-brand-navy text-white rounded-lg font-bold tracking-widest uppercase text-[10px] hover:bg-brand-navy/90 transition-all flex items-center shadow-2xl shadow-brand-navy/20 active:scale-95"
+                >
+                  Agendar avaliação personalizada <PlayCircle className="ml-3 w-4 h-4 text-accent" />
+                </a>
+                <Link to="/procedimentos" className="px-10 py-5 border border-accent text-accent rounded-lg font-bold tracking-widest uppercase text-[10px] hover:bg-accent hover:text-white transition-all text-center flex items-center">
+                  Ver Procedimentos
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Column 2: Specialist Profile */}
+            <motion.div 
+               initial={{ opacity: 0, x: 30 }}
+               animate={{ opacity: 1, x: 0 }}
+               transition={{ duration: 1 }}
+               className="lg:col-span-6 w-full order-1 lg:order-2 space-y-8"
+            >
+              <div className="relative group max-w-md mx-auto lg:ml-auto">
+                <div className="aspect-[4/5] rounded-[2.5rem] border border-accent/20 overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.2)] relative z-10 bg-brand-navy/5">
+                  <img 
+                    src="/dra_carina_corneta.png" 
+                    alt="Dra. Carina Corneta" 
+                    className="w-full h-full object-cover grayscale-[0.1] group-hover:grayscale-0 transition-all duration-1000"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-brand-navy/80 via-brand-navy/20 to-transparent text-white">
+                    <p className="font-display text-2xl mb-1">Dra. Carina Corneta</p>
+                    <p className="text-[9px] tracking-[0.2em] uppercase text-accent font-bold">Resgatando sua melhor essência</p>
+                  </div>
+                </div>
+                
+                {/* Decorative Accents */}
+                <div className="absolute -top-10 -right-10 w-64 h-64 bg-accent/15 rounded-full blur-3xl -z-10 animate-pulse"></div>
+                <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-brand-navy/10 rounded-full blur-3xl -z-10"></div>
+                
+                {/* Floating CRO Badge */}
+                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white px-8 py-3 rounded-xl shadow-xl z-20 border border-border whitespace-nowrap">
+                   <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-brand-navy">CROSP 113657</p>
                 </div>
               </div>
-              {/* Artistic background blur */}
-              <div className="absolute -top-10 -right-10 w-64 h-64 bg-accent/20 rounded-full blur-3xl -z-10 rotate-12"></div>
-              <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-brand-navy/10 rounded-full blur-3xl -z-10"></div>
-            </div>
-          </motion.div>
+
+              {/* Advanced Bio Card - Repositioned Below Photo */}
+              <div className="bg-white/60 backdrop-blur-md border border-accent/10 rounded-2xl p-8 max-w-md mx-auto lg:ml-auto relative group hover:border-accent/30 transition-all shadow-sm">
+                <div className="flex flex-col md:flex-row gap-6 items-start">
+                  <div className="space-y-4 flex-1">
+                    <div className="space-y-1">
+                      <p className="text-[9px] font-bold uppercase tracking-[0.4em] text-accent">Sua Especialista</p>
+                      <h3 className="text-2xl font-display text-brand-navy italic">Dra. Carina Corneta</h3>
+                    </div>
+                    <div className="space-y-4 text-sm text-muted leading-relaxed font-light">
+                      <p>
+                        Cirurgiã-dentista formada pela <span className="font-semibold text-brand-navy underline decoration-accent/30 underline-offset-4">Unicamp</span>, especialista em reabilitação oral e estética.
+                      </p>
+                      <p>
+                        Com mais de <span className="font-semibold text-brand-navy italic">10 anos de experiência</span>, dedica-se a criar sorrisos naturais, longe de padrões artificiais, através de um planejamento personalizado e cuidadoso.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-2 font-display italic text-brand-navy border-l border-border pl-6">
+                    <span className="text-3xl">10+</span>
+                    <span className="text-[10px] uppercase tracking-widest font-bold not-italic text-accent">Anos de <br/>Carreira</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
