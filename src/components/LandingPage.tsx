@@ -120,7 +120,7 @@ export default function LandingPage() {
             { 
               title: 'Lentes de Contato Dental', 
               badge: 'Procedimento Premium',
-              desc: 'Lentes de contato dental: laminados ultrafinos em porcelana que transformam o sorriso de forma rápida, segura e natural. Indicadas para corrigir cor, formato e pequenos desalinhamentos.' 
+              desc: 'Laminados ultrafinos em porcelana que transformam o sorriso de forma rápida, segura e natural. Indicadas para corrigir cor, formato e pequenos desalinhamentos.' 
             },
             { 
               title: 'Seu Tratamento Personalizado', 
