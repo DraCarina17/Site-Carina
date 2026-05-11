@@ -4,8 +4,31 @@
  */
 
 import { motion } from 'motion/react';
-import { Phone, Instagram, CheckCircle2, PlayCircle } from 'lucide-react';
+import { Phone, Instagram, CheckCircle2, PlayCircle, Sparkles, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
+const cases = [
+  {
+    id: 1,
+    category: 'Lente de Contato',
+    imageAfter: '/lente1.png',
+  },
+  {
+    id: 2,
+    category: 'Lente de Contato',
+    imageAfter: '/lente2.png',
+  },
+  {
+    id: 3,
+    category: 'Prótese Protocolo',
+    imageAfter: '/protocolo.png',
+  },
+  {
+    id: 4,
+    category: 'Transformação com Coroas em Porcelana',
+    imageAfter: '/reabilitacao.png',
+  }
+].sort((a, b) => a.category.localeCompare(b.category));
 
 export default function LandingPage() {
   return (
@@ -147,6 +170,69 @@ export default function LandingPage() {
         </div>
         {/* Background decorative element */}
         <div className="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-accent/5 rounded-full blur-[100px]"></div>
+      </section>
+
+      {/* Clinical Cases Section - Embedded for Home */}
+      <section className="py-24 px-8 bg-white overflow-hidden" id="casos">
+        <div className="max-w-7xl mx-auto space-y-16">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+            <div className="space-y-4">
+              <div className="flex items-center gap-2 text-accent">
+                <Sparkles className="w-4 h-4" />
+                <p className="text-[10px] font-bold uppercase tracking-[0.3em]">Transformações Reais</p>
+              </div>
+              <h2 className="text-4xl md:text-6xl font-display text-brand-navy">
+                Casos <span className="text-accent italic">Clínicos</span>
+              </h2>
+              <p className="text-muted max-w-xl font-light">
+                Conheça alguns dos resultados que alcançamos através de um planejamento personalizado e humanizado.
+              </p>
+            </div>
+            <Link 
+              to="/casos-clinicos" 
+              className="group flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-brand-navy hover:text-accent transition-colors"
+            >
+              Ver galeria completa
+              <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {cases.map((c, idx) => (
+              <motion.div 
+                key={c.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="group space-y-4"
+              >
+                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-border shadow-sm bg-brand-navy/5">
+                  <img 
+                    src={c.imageAfter} 
+                    alt={c.category} 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-brand-navy text-[9px] font-bold uppercase tracking-widest rounded-full shadow-sm">
+                      {c.category}
+                    </span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          
+          {/* Mobile direct CTA for cases */}
+          <div className="md:hidden pt-4">
+            <Link 
+              to="/casos-clinicos" 
+              className="w-full flex items-center justify-center gap-3 py-4 border border-accent/20 rounded-xl text-[10px] font-bold uppercase tracking-widest text-accent hover:bg-accent/5 transition-all"
+            >
+              Ver todos os resultados
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* Info Grid - Updated Style */}
