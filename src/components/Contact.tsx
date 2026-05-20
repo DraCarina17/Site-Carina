@@ -6,6 +6,7 @@
 import { motion } from 'motion/react';
 import { Phone, Instagram, MapPin, Mail, ArrowLeft, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { trackWhatsAppClick } from '../gtag';
 
 export default function Contact() {
   return (
@@ -36,6 +37,7 @@ export default function Contact() {
                 href="https://wa.me/5516996300633" 
                 target="_blank" 
                 rel="noreferrer"
+                onClick={() => trackWhatsAppClick('contact_page')}
                 className="flex items-center p-6 border border-border bg-white rounded-2xl hover:border-accent transition-all group"
               >
                 <div className="p-4 bg-green-500/10 text-green-600 rounded-xl group-hover:scale-110 transition-transform">

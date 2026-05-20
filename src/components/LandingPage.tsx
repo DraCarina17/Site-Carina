@@ -6,6 +6,7 @@
 import { motion } from 'motion/react';
 import { Phone, Instagram, CheckCircle2, PlayCircle, Sparkles, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { trackWhatsAppClick } from '../gtag';
 
 const cases = [
   {
@@ -79,6 +80,7 @@ export default function LandingPage() {
                   href="https://wa.me/5516996300633" 
                   target="_blank" 
                   rel="noreferrer"
+                  onClick={() => trackWhatsAppClick('hero_button')}
                   className="px-10 py-5 bg-brand-navy text-white rounded-lg font-bold tracking-widest uppercase text-[10px] hover:bg-brand-navy/90 transition-all flex items-center shadow-2xl shadow-brand-navy/20 active:scale-95"
                 >
                   Agendar avaliação personalizada <PlayCircle className="ml-3 w-4 h-4 text-accent" />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { MessageCircle } from 'lucide-react';
+import { trackWhatsAppClick } from '../gtag';
 
 export default function WhatsAppButton() {
   const whatsappNumber = "5516996300633"; // Número real extraído do Contact.tsx
@@ -13,6 +14,7 @@ export default function WhatsAppButton() {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackWhatsAppClick('floating_button')}
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         whileHover={{ scale: 1.1 }}
