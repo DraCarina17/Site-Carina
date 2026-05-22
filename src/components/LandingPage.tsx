@@ -146,6 +146,26 @@ export default function LandingPage() {
               </div>
             </motion.div>
           </div>
+
+          {/* Procedures Image - capa_meu_negocio.png (1254x1254) */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mt-20 max-w-4xl mx-auto w-full px-4"
+          >
+            <div className="bg-white border border-accent/15 rounded-3xl overflow-hidden relative group hover:border-accent/40 transition-all shadow-xl shadow-brand-navy/5">
+              <div className="relative overflow-hidden w-full">
+                <img 
+                  src="/capa_meu_negocio.png" 
+                  alt="Procedimentos Clínicos - Dra. Carina Corneta" 
+                  className="w-full h-auto object-cover group-hover:scale-[1.015] transition-transform duration-700"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent pointer-events-none"></div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
