@@ -11,7 +11,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         <div className="text-center md:text-left space-y-2">
           <p className="text-[10px] text-brand-navy uppercase tracking-[0.4em] font-bold">Dra. Carina Corneta | CROSP 113657</p>
-          <p className="text-[10px] text-accent font-medium uppercase tracking-[0.2em]">Reabilitação Oral & Estética Avançada</p>
+          <p className="text-[10px] text-accent font-medium leading-relaxed max-w-xs md:max-w-md">
+            Dentista em São Carlos especializada em Reabilitação Oral, Implantes, Próteses e Estética Dental.
+          </p>
         </div>
 
         <div className="flex flex-col md:flex-row items-center gap-6 text-muted">
@@ -35,7 +37,10 @@ export default function Footer() {
         </div>
       </div>
       
-      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-border/50 text-center">
+      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-border/50 text-center space-y-4">
+        <p className="text-xs text-muted/75 max-w-4xl mx-auto font-light leading-relaxed">
+          Clínica odontológica localizada no Centro de São Carlos/SP. Atendimento em implantes dentários, próteses, coroas em porcelana, lentes de contato dental, reabilitação oral e estética dental.
+        </p>
         <p className="text-[9px] uppercase tracking-widest text-muted/60">
           © {new Date().getFullYear()} Dra. Carina Corneta. Todos os direitos reservados.
         </p>

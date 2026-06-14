@@ -45,7 +45,7 @@ export default function ClinicalCases() {
       </nav>
 
       <header className="py-20 px-8 text-center max-w-4xl mx-auto space-y-4">
-        <h1 className="text-4xl md:text-6xl font-display">Galeria de <span className="text-accent italic">Transformações</span></h1>
+        <h1 className="text-4xl md:text-6xl font-display">Antes e Depois: Próteses e <span className="text-accent italic">Lentes em São Carlos</span></h1>
         <p className="text-muted leading-relaxed">
           Resultados reais de pacientes que recuperaram a autoestima e a função através da Reabilitação Oral e Estética Avançada.
         </p>

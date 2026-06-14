@@ -3,8 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Phone, Instagram, CheckCircle2, PlayCircle, Sparkles, ChevronRight } from 'lucide-react';
+import { Phone, Instagram, CheckCircle2, PlayCircle, Sparkles, ChevronRight, ChevronDown, HelpCircle, MapPin, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { trackWhatsAppClick } from '../gtag';
 
@@ -38,7 +39,9 @@ export default function LandingPage() {
       <nav className="p-8 flex justify-between items-center max-w-7xl mx-auto border-b border-border">
         <div className="flex flex-col">
           <span className="font-display text-2xl tracking-tighter text-text uppercase">Dra. Carina Corneta</span>
-          <span className="text-[10px] tracking-[0.3em] font-bold uppercase text-accent">Reabilitação Oral & Estética Avançada</span>
+          <span className="text-[10px] sm:text-xs tracking-[0.05em] font-semibold text-accent max-w-xs sm:max-w-md pt-1">
+            Dentista em São Carlos especializada em Reabilitação Oral, Implantes, Próteses e Estética Dental.
+          </span>
         </div>
         <div className="hidden md:flex space-x-10 text-xs uppercase tracking-[0.2em] font-bold">
           <Link to="/procedimentos" className="hover:text-accent transition-colors">Procedimentos</Link>
@@ -50,44 +53,68 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="relative pt-20 pb-32 px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             
             {/* Column 1: Intro & Call to Action */}
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="lg:col-span-6 space-y-12 order-2 lg:order-1 pt-8"
+              className="lg:col-span-7 space-y-8 order-2 lg:order-1 pt-4 lg:pt-8"
             >
-              <div className="space-y-8">
-                <div className="inline-flex items-center gap-3 px-4 py-2 bg-white border border-border rounded-lg shadow-sm">
-                  <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-                  <span className="text-[10px] uppercase tracking-widest font-bold text-muted italic">Consultório Odontológico em São Carlos/SP</span>
+              <div className="space-y-6">
+                <div>
+                  <div className="inline-flex items-center gap-3 px-4 py-2 bg-white border border-border rounded-full shadow-sm">
+                    <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                    <span className="text-[10px] uppercase tracking-widest font-bold text-muted italic">Consultório Odontológico em São Carlos/SP</span>
+                  </div>
                 </div>
                 
-                <h1 className="text-5xl md:text-8xl font-display leading-[0.95] text-brand-navy">
-                  Estética Dental com <br />
-                  <span className="text-accent italic">Naturalidade e Precisão</span>
+                <h1 className="text-4xl sm:text-5xl lg:text-[3rem] xl:text-[3.6rem] font-display leading-[1.12] tracking-tight text-brand-navy">
+                  Dentista em São Carlos <br />
+                  Prótese e Clareamento <br />
+                  <span className="text-accent italic font-light">com Excelência</span>
                 </h1>
                 
-                <p className="text-xl text-muted max-w-xl leading-relaxed font-light border-l-2 border-accent/20 pl-6">
-                  Se você tem medo de um sorriso artificial ou exagerado, você não está sozinho. Nosso foco não é transformar você em outra pessoa — é valorizar o que já é seu.
+                <p className="text-lg md:text-xl text-muted max-w-xl leading-relaxed font-light border-l-2 border-accent/20 pl-6">
+                  Se você teme um resultado artificial, está no lugar certo. Valorizamos sua melhor essência através de próteses de alta precisão e clareamento dental personalizado, planejados sob medida para o seu rosto.
                 </p>
+
+                {/* Micro-Trust Badges for CRO (Google Ads) */}
+                <div className="flex flex-wrap gap-y-2 gap-x-6 pt-2 text-xs font-medium text-brand-navy/90">
+                  <div className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
+                    <span>Estética Natural</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
+                    <span>Formação UNICAMP</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
+                    <span>+10 anos de experiência</span>
+                  </div>
+                </div>
               </div>
 
-              <div className="flex flex-wrap gap-6 pt-4">
-                <a 
-                  href="https://wa.me/5516996300633" 
-                  target="_blank" 
-                  rel="noreferrer"
-                  onClick={() => trackWhatsAppClick('hero_button')}
-                  className="px-10 py-5 bg-brand-navy text-white rounded-lg font-bold tracking-widest uppercase text-[10px] hover:bg-brand-navy/90 transition-all flex items-center shadow-2xl shadow-brand-navy/20 active:scale-95"
-                >
-                  Agendar avaliação personalizada <PlayCircle className="ml-3 w-4 h-4 text-accent" />
-                </a>
-                <Link to="/procedimentos" className="px-10 py-5 border border-accent text-accent rounded-lg font-bold tracking-widest uppercase text-[10px] hover:bg-accent hover:text-white transition-all text-center flex items-center">
-                  Ver Procedimentos
-                </Link>
+              <div className="space-y-3">
+                <div className="flex flex-wrap gap-4">
+                  <a 
+                    href="https://wa.me/5516996300633" 
+                    target="_blank" 
+                    rel="noreferrer"
+                    onClick={() => trackWhatsAppClick('hero_button')}
+                    className="px-8 py-5 bg-brand-navy text-white rounded-lg font-bold tracking-widest uppercase text-[10px] hover:bg-brand-navy/90 transition-all flex items-center shadow-2xl shadow-brand-navy/20 active:scale-[0.98]"
+                  >
+                    Falar no WhatsApp e Agendar <span className="ml-3 w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                  </a>
+                  <Link to="/procedimentos" className="px-8 py-5 border border-accent/40 text-accent rounded-lg font-bold tracking-widest uppercase text-[10px] hover:bg-accent hover:text-white transition-all text-center flex items-center">
+                    Ver Procedimentos
+                  </Link>
+                </div>
+                <p className="text-xs text-muted/80 pl-1 font-light italic">
+                  * Clique acima para falar diretamente conosco. Agendamento simples em menos de 2 minutos.
+                </p>
               </div>
             </motion.div>
 
@@ -96,7 +123,7 @@ export default function LandingPage() {
                initial={{ opacity: 0, x: 30 }}
                animate={{ opacity: 1, x: 0 }}
                transition={{ duration: 1 }}
-               className="lg:col-span-6 w-full order-1 lg:order-2 space-y-8"
+               className="lg:col-span-5 w-full order-1 lg:order-2 space-y-8"
             >
               <div className="relative group max-w-md mx-auto lg:ml-auto">
                 <div className="aspect-[4/5] rounded-[2.5rem] border border-accent/20 overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.2)] relative z-10 bg-brand-navy/5">
@@ -127,11 +154,11 @@ export default function LandingPage() {
                   <div className="space-y-4 flex-1">
                     <div className="space-y-1">
                       <p className="text-[9px] font-bold uppercase tracking-[0.4em] text-accent">Sua Especialista</p>
-                      <h3 className="text-2xl font-display text-brand-navy italic">Dra. Carina Corneta</h3>
+                      <h3 className="text-2xl font-display text-brand-navy italic">Dra. Carina Corneta - Reabilitação Oral e Prótese</h3>
                     </div>
                     <div className="space-y-4 text-sm text-muted leading-relaxed font-light">
                       <p>
-                        Cirurgiã-dentista formada pela <span className="font-semibold text-brand-navy underline decoration-accent/30 underline-offset-4">Unicamp</span>, especialista em reabilitação oral e estética.
+                        Cirurgiã-dentista formada pela <span className="font-semibold text-brand-navy underline decoration-accent/30 underline-offset-4">Unicamp</span>, especialista em reabilitação oral, próteses dentárias, coroas em porcelana, lentes de contato dental e estética do sorriso em São Carlos/SP.
                       </p>
                       <p>
                         Com mais de <span className="font-semibold text-brand-navy italic">10 anos de experiência</span>, dedica-se a criar sorrisos naturais, longe de padrões artificiais, através de um planejamento personalizado e cuidadoso.
@@ -188,7 +215,7 @@ export default function LandingPage() {
       <section className="py-24 px-8 bg-brand-navy relative overflow-hidden">
         <div className="max-w-5xl mx-auto flex flex-col items-center text-center space-y-12">
           <div className="space-y-4">
-             <h2 className="text-3xl md:text-5xl font-display text-white">Conheça nosso <span className="text-accent italic">Espaço</span></h2>
+             <h2 className="text-3xl md:text-5xl font-display text-white">Nosso Consultório Odontológico em <span className="text-accent italic">São Carlos</span></h2>
              <p className="text-white/60 max-w-2xl mx-auto">Tecnologia avançada e um ambiente planejado para o seu máximo conforto em São Carlos.</p>
           </div>
 
@@ -219,7 +246,7 @@ export default function LandingPage() {
                 <p className="text-[10px] font-bold uppercase tracking-[0.3em]">Transformações Reais</p>
               </div>
               <h2 className="text-4xl md:text-6xl font-display text-brand-navy">
-                Casos <span className="text-accent italic">Clínicos</span>
+                Casos Clínicos de <span className="text-accent italic">Lentes e Próteses</span>
               </h2>
               <p className="text-muted max-w-xl font-light">
                 Conheça alguns dos resultados que alcançamos através de um planejamento personalizado e humanizado.
@@ -272,32 +299,108 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Info Grid - Updated Style */}
-      <section className="bg-white/50 py-24 px-8 border-y border-border">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-          {[
-            { 
-              title: 'Lentes de Contato Dental', 
-              badge: 'Procedimento Premium',
-              desc: 'Laminados ultrafinos em porcelana que transformam o sorriso de forma rápida, segura e natural. Indicadas para corrigir cor, formato e pequenos desalinhamentos.' 
-            },
-            { 
-              title: 'Seu Tratamento Personalizado', 
-              badge: 'O MELHOR PARA VOCÊ',
-              desc: 'Entregamos um serviço exclusivo baseado em sua necessidade. Buscamos ouvir as queixas e desejos do paciente para, combinado com nossa expertise, gerar a melhor entrega para você.' 
-            },
-            { 
-              title: 'Recupere sua Função e Estética', 
-              badge: 'VOLTE A SORRIR E COMER',
-              desc: 'Nossa missão é te fazer sorrir e voltar a ter uma mastigação satisfatória, devolvendo a confiança e o prazer em cada momento da sua vida.' 
-            }
-          ].map((item, idx) => (
-            <div key={idx} className="p-8 bg-white border border-border rounded-xl hover:border-accent transition-colors shadow-sm">
-              <div className="badge border-accent/40 text-accent mb-4 px-2 py-0.5 rounded-full inline-block bg-accent/5">{item.badge}</div>
-              <h3 className="text-xl font-display mb-3 text-brand-navy">{item.title}</h3>
-               <p className="text-sm text-muted leading-relaxed">{item.desc}</p>
+      {/* Seção Coroas em Porcelana em São Carlos */}
+      <section className="py-24 px-8 bg-brand-navy text-white relative overflow-hidden border-t border-accent/20">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="space-y-6">
+              <span className="text-[10px] uppercase tracking-[0.4em] text-accent font-bold">Máxima Resistência e Estereotomia Estética</span>
+              <h2 className="text-4xl md:text-5xl font-display leading-tight">
+                Coroas em Porcelana <br />
+                <span className="text-accent italic font-light">em São Carlos</span>
+              </h2>
+              <p className="text-white/80 font-light text-lg leading-relaxed max-w-xl">
+                Recuperação de dentes fraturados, desgastados ou comprometidos com coroas de porcelana altamente estéticas e resistentes. Devolvemos a harmonia e o prazer de mastigar com modernos materiais livres de metal.
+              </p>
+              <div className="space-y-4 pt-4">
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                  <p className="text-sm text-white/70 font-light">
+                    <strong className="text-white font-medium">Livre de metal (Metal-free):</strong> Coroas de altíssima fidelidade estética e biocompatibilidade, ideais para se fundirem perfeitamente aos seus dentes naturais.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                  <p className="text-sm text-white/70 font-light">
+                    <strong className="text-white font-medium">Ajuste de altíssima precisão:</strong> Planejamento focado na naturalidade com laboratórios de prótese artesanal de alto nível.
+                  </p>
+                </div>
+              </div>
+              <div className="pt-6">
+                <a 
+                  href="https://wa.me/5516996300633" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  onClick={() => trackWhatsAppClick('porcelain_crowns_section')}
+                  className="px-8 py-4 bg-accent hover:bg-accent/90 text-white rounded-lg font-bold tracking-widest uppercase text-[10px] transition-all inline-flex items-center active:scale-95"
+                >
+                  Consultar sobre Coroas de Porcelana <ChevronRight className="ml-2 w-4 h-4" />
+                </a>
+              </div>
             </div>
-          ))}
+            
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden border border-accent/20 shadow-2xl relative bg-white/5">
+                <img 
+                  src="/reabilitacao.png" 
+                  alt="Tratamento com Coroa em Porcelana em São Carlos" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute top-4 right-4">
+                  <span className="px-3 py-1 bg-brand-navy/95 text-accent text-[9px] font-bold uppercase tracking-widest rounded-full border border-accent/30 shadow-sm animate-pulse">
+                    Caso Realizado
+                  </span>
+                </div>
+              </div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent/10 rounded-full blur-2xl -z-10"></div>
+            </div>
+          </div>
+        </div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[150px] -z-10"></div>
+      </section>
+
+      {/* Info Grid - Updated Style with optimized SEO layout */}
+      <section className="bg-white/50 py-24 px-8 border-t border-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-accent">REABILITAÇÃO E ESTÉTICA</span>
+            <h2 className="text-3xl md:text-5xl font-display text-brand-navy leading-tight">
+              Estética Dental, Coroas em Porcelana e Reabilitação Oral em São Carlos
+            </h2>
+            <p className="text-base md:text-lg text-muted font-light max-w-2xl mx-auto leading-relaxed pt-2">
+              Tratamentos personalizados para recuperar dentes desgastados, quebrados ou comprometidos, devolvendo função, conforto e estética natural.
+            </p>
+            
+            {/* Texto forte para indexação no Google de forma elegante */}
+            <p className="text-xs text-muted/65 max-w-2xl mx-auto leading-relaxed pt-3 italic font-light border-t border-border/40 mt-4">
+              <strong>Tratamentos odontológicos em São Carlos:</strong> implantes dentários, próteses fixas e removíveis, coroas em porcelana, lentes de contato dental, clareamento dental, restaurações estéticas e tratamento do bruxismo.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {[
+              { 
+                title: 'Lentes de Contato Dental', 
+                badge: 'Procedimento Premium',
+                desc: 'Laminados ultrafinos em porcelana que transformam o sorriso de forma rápida, segura e natural. Indicadas para corrigir cor, formato e pequenos desalinhamentos.' 
+              },
+              { 
+                title: 'Seu Tratamento Personalizado', 
+                badge: 'O MELHOR PARA VOCÊ',
+                desc: 'Entregamos um serviço exclusivo baseado em sua necessidade. Buscamos ouvir as queixas e desejos do paciente para, combinado com nossa expertise, gerar a melhor entrega para você.' 
+              },
+              { 
+                title: 'Recupere sua Função e Estética', 
+                badge: 'VOLTE A SORRIR E COMER',
+                desc: 'Nossa missão é te fazer sorrir e voltar a ter uma mastigação satisfatória, devolvendo a confiança e o prazer em cada momento da sua vida.' 
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="p-8 bg-white border border-border rounded-xl hover:border-accent transition-all shadow-sm group">
+                <div className="badge border border-accent/20 text-accent mb-4 px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest bg-accent/5 inline-block">{item.badge}</div>
+                <h3 className="text-xl font-display mb-3 text-brand-navy group-hover:text-accent transition-colors">{item.title}</h3>
+                <p className="text-sm text-muted leading-relaxed font-light">{item.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>

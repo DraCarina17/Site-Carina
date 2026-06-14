@@ -74,7 +74,7 @@ export default function Procedures() {
       </nav>
 
       <header className="py-20 px-8 text-center max-w-4xl mx-auto space-y-4">
-        <h1 className="text-4xl md:text-6xl font-display">Nossos <span className="text-accent italic">Procedimentos</span></h1>
+        <h1 className="text-4xl md:text-6xl font-display">Tratamentos de Prótese e <span className="text-accent italic">Estética Dental em São Carlos</span></h1>
         <p className="text-muted leading-relaxed">Cada tratamento é planejado de forma individualizada, unindo ciência e arte para resultados excepcionais e recuperação total da sua auto estima e função.</p>
       </header>
 

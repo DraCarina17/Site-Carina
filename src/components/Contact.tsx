@@ -26,7 +26,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="space-y-12">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-6xl font-display">Fale <span className="text-accent italic">Conosco</span></h1>
+              <h1 className="text-4xl md:text-6xl font-display">Fale Conosco | <span className="text-accent italic">Dentista em São Carlos</span></h1>
               <p className="text-muted leading-relaxed max-w-lg">
                 Seu novo sorriso começa com uma conversa. Escolha o canal de sua preferência para agendar sua avaliação personalizada com a Dra. Carina Corneta.
               </p>
