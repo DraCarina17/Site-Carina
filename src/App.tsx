@@ -59,10 +59,10 @@ export default function App() {
     <Router>
       <NavigationTracker />
       <Routes>
-        {/* Dynamic Root Redirection based on environment */}
+        {/* In preview, show sitemap. In production, show LandingPage directly at the root '/' for better SEO. */}
         <Route 
           path="/" 
-          element={<Navigate to={isPreview ? "/sitemap" : "/lp-video"} replace />} 
+          element={isPreview ? <Navigate to="/sitemap" replace /> : <LandingPage />} 
         />
         
         {/* Main Routes */}
